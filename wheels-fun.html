@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fun Wheels - SK8 or Die Workshop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Fun Wheels</h1>
+    <p class="subtitle">Our collection of Fun pictures of our wheels</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wheels.html">Back to Wheels</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="item-gallery">
+      <!-- Images -->
+      <div class="item">
+        <img src="SK8 pics/Old School Wheels.jpg"
+             data-full="SK8 pics/Old School Wheels.jpg" 
+             data-description="Drawer of Old School wheel collection.">
+        <p>Old School wheel drawer</p>
+      </div>
+
+      <div class="item">
+        <img src="SK8 pics/Wheels1.jpg"
+             data-full="SK8 pics/Wheels1.jpg" 
+             data-description="Drawer of wheels collection.">
+        <p>Main wheel drawer</p>
+      </div>
+
+      <div class="item">
+        <img src="SK8 pics/Other Wheels.jpg"
+             data-full="SK8 pics/Other Wheels.jpg" 
+             data-description="Other Wheels.">
+        <p>Extra wheels</p>
+      </div>
+
+      <div class="item">
+        <img src="SK8 pics/Bench wheels.jpg"
+             data-full="SK8 pics/Bench Wheels.jpg" 
+             data-description="Wheels hanging on the workbench.">
+        <p>Workbench wheels</p>
+      </div>
+
+
+      <!-- You can add additional wheel items here in a similar manner -->
+    </section>
+  </main>
+
+  <!-- Lightbox Modal (should be included on pages where you want the full image pop-up) -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+  }
+  header h1 {
+    margin: 0;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav ul li {
+    margin-right: 1em;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  main {
+    padding: 1em;
+  }
+  section {
+    margin-bottom: 2em;
+  }
+  
+  /* Gallery Styles */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery .item {
+    margin: 0.5em;
+    text-align: center;
+  }
+  .gallery .item img {
+    max-width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .gallery .item img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Lightbox Styles */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  /* Full‑Size Image in the Lightbox */
+  .lightbox-content {
+    margin: auto;
+    display: block;
+   /* width: 80%;*/
+    height: 80%;
+    max-width: 1200px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    color: #ccc;
+    padding: auto;
+  }
+
+  .lightbox-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;              /* Fill the viewport height */
+    min-height: 6000px;          /* Or whatever minimum height you desire */
+    padding-top: 60px;          /* Existing top gap */
+    padding-bottom: 60px;       /* New bottom gap */
+    box-sizing: border-box;     /* Includes padding in the total height */
+    overflow-y: auto;           /* Allows scrolling if content is too tall */
+    text-align: center;
+  }
+  
+  header h1 {
+    margin-bottom: 0.3em;  /* space below the main title */
+  }
+  
+  .subtitle {
+    font-size: 0.9em;      /* slightly smaller than the main title */
+    color: #FFFFFF;           /* adjust the color for subtlety */
+    margin: 0.2em 0 1em 0;  /* top, right, bottom, left; adds space below the subtitle */
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+  header {
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  main img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .item-gallery .item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* Optional: add a border or margin if needed */
+    margin: 0.5em;
+  }
+   /* Gallery info and size*/
+  .item-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .item-gallery .item {
+    text-align: center; /* Center the caption text under each image */
+  }
+  
+  .item-gallery .item img {
+    width: 100%;         /* Make images responsive */
+    height: auto;        /* Maintain aspect ratio */
+    object-fit: cover;   /* Crop images if needed */
+    border-radius: 5px;  /* Optional: add rounded corners */
+  }
+  
+  

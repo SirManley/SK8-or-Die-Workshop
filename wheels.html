@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wheels - SK8 or Die Workshop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline styles for layout; you can move these to style.css if desired */
+    .layout-container {
+      display: flex;
+      /* Optional: set a minimum height for visual balance */
+      min-height: 60vh;
+    }
+    .category-menu {
+      width: 200px;  /* Fixed width for your sidebar */
+      padding: 20px;
+      background-color: #f0f0f0; /* Optional background */
+    }
+    .content {
+      flex: 1; /* Takes up the remaining space */
+      display: flex;
+      justify-content: center; /* Horizontally center the image */
+      align-items: center;     /* Vertically center the image */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wheels Collection</h1>
+    <p class="subtitle">Select a brand to view our wheel selection</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wheels.html">Wheels</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Container for the sidebar and main content -->
+  <div class="layout-container">
+    <!-- Sidebar menu -->
+    <section class="category-menu">
+      <h2>Select a Brand</h2>
+      <ul>
+        <li><a href="wheels-fun.html">Fun</a></li>
+        <li><a href="wheels-powell.html">Powell</a></li>
+        <li><a href="wheels-spitfire.html">Spitfire</a></li>
+        <li><a href="wheels-ojii.html">OJII</a></li>
+        <li><a href="wheels-other.html">Other</a></li>
+      </ul>
+    </section>
+    
+    <!-- Main content area for the image -->
+    <main class="content">
+      <img src="SK8 pics/Wheels-collage.jpg" alt="Wheels Overview">
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
