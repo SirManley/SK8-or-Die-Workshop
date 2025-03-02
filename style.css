@@ -1,61 +1,122 @@
-/* General Styles */
+/* =====================================================
+   Global Styles
+===================================================== */
+
+/* Reset and basic styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
+  
+  /* =====================================================
+     Header & Navigation
+  ===================================================== */
   header {
     background-color: #333;
     color: white;
     padding: 1em;
+    text-align: center;
   }
+  
   header h1 {
     margin: 0;
+    margin-bottom: 0.3em;
+    font-size: 3em; /* Adjust this value to control the size */
   }
+  
+  .subtitle {
+    font-size: 0.9em;
+    color: #FFFFFF;
+    margin: 0.2em 0 1em 0;
+    font-size: 1em; /* Adjust this value to control the size */
+  }
+  
   nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
   }
+  
   nav ul li {
     margin-right: 1em;
   }
+  
   nav ul li a {
     color: white;
     text-decoration: none;
   }
+  
+  /* =====================================================
+     Main Content & Galleries
+  ===================================================== */
   main {
     padding: 1em;
   }
+  
   section {
     margin-bottom: 2em;
   }
   
-  /* Gallery Styles */
+  /* Gallery Styles for .gallery (if used separately) */
   .gallery {
     display: flex;
     flex-wrap: wrap;
   }
+  
   .gallery .item {
     margin: 0.5em;
     text-align: center;
   }
+  
   .gallery .item img {
     max-width: 150px;
     cursor: pointer;
     transition: transform 0.2s;
   }
+  
   .gallery .item img:hover {
     transform: scale(1.1);
   }
   
-  /* Lightbox Styles */
+  /* Styles for the Item Gallery */
+  .item-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+    padding: 10px;
+  }
+  
+  .item-gallery .item {
+    text-align: center;
+  }
+  
+  .item-gallery .item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0.5em; /* Optional if you want extra spacing */
+  }
+  
+  /* Global rule for images in main content */
+  main img {
+    display: block;
+    margin: 0 auto;
+    max-height: 85vh;  /* Image will never exceed 85% of the viewport height */
+    object-fit: contain; /* Maintains the image's aspect ratio without cropping */
+  }
+  
+  /* =====================================================
+     Lightbox Styles
+  ===================================================== */
   .lightbox {
     display: none;
     position: fixed;
     z-index: 999;
-    padding-top: 60px;
+    padding-top: 20px; /* Space for the close button */
     left: 0;
     top: 0;
     width: 100%;
@@ -63,13 +124,15 @@ body {
     overflow: auto;
     background-color: rgba(0,0,0,0.9);
   }
-  /* Full‑Size Image in the Lightbox */
+  
   .lightbox-content {
     margin: auto;
     display: block;
-   /* width: 80%;*/
-    height: 80%;
+    width: 100%;
     max-width: 1200px;
+    /* You can adjust width or height here as needed */
+    max-height: 85vh;  /* 90% of the viewport's height */
+    object-fit: contain; /* Ensures the image scales proportionally without cropping */
   }
   
   .close {
@@ -81,6 +144,7 @@ body {
     font-weight: bold;
     cursor: pointer;
   }
+  
   #caption {
     margin: auto;
     display: block;
@@ -88,81 +152,45 @@ body {
     max-width: 1200px;
     text-align: center;
     color: #ccc;
-    padding: auto;
+    padding: 10px 0; /* Fixed padding instead of "auto" */
+  }
+/* Skateboards-All page lightbox style */
+.skateboards-all .lightbox-content {
+    max-width: 500px; /* Different value for skateboards-all */
   }
 
+  
+  /* Lightbox Inner Container for Flex Layout */
   .lightbox-inner {
     display: flex;
     flex-direction: column;
-    height: 100vh;              /* Fill the viewport height */
-    min-height: 6000px;          /* Or whatever minimum height you desire */
-    padding-top: 60px;          /* Existing top gap */
-    padding-bottom: 60px;       /* New bottom gap */
-    box-sizing: border-box;     /* Includes padding in the total height */
-    overflow-y: auto;           /* Allows scrolling if content is too tall */
+    height: 100vh;           /* Fill the viewport height */
+    /* Removed min-height: 6000px; -- use a realistic minimum if needed */
+    padding-top: 20px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    overflow-y: auto;
     text-align: center;
   }
   
-  header h1 {
-    margin-bottom: 0.3em;  /* space below the main title */
+  /* =====================================================
+     Responsive Adjustments
+  ===================================================== */
+  @media (max-width: 768px) {
+    nav ul li a {
+      font-size: 0.8em;
+      padding: 0.5em;
+    }
+    
+    /* Additional responsive rules can go here if needed */
   }
-  
-  .subtitle {
-    font-size: 0.9em;      /* slightly smaller than the main title */
-    color: #FFFFFF;           /* adjust the color for subtlety */
-    margin: 0.2em 0 1em 0;  /* top, right, bottom, left; adds space below the subtitle */
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+ 
 
-  header {
-    text-align: center;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  main img {
+  /* Scale the image*/
+  .content img {
+    width: 40%;  /* Makes the image 50% as wide as its container */
+    height: auto;
     display: block;
     margin: 0 auto;
-  }
-  
-  .item-gallery .item img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    /* Optional: add a border or margin if needed */
-    margin: 0.5em;
-  }
-   /* Gallery info and size*/
-  .item-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 20px;
-  }
-  
-  .item-gallery .item {
-    text-align: center; /* Center the caption text under each image */
-  }
-  
-  .item-gallery .item img {
-    width: 100%;         /* Make images responsive */
-    height: auto;        /* Maintain aspect ratio */
-    object-fit: cover;   /* Crop images if needed */
-    border-radius: 5px;  /* Optional: add rounded corners */
-  }
-  
+   }
   
