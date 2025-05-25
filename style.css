@@ -133,6 +133,7 @@ body {
     /* You can adjust width or height here as needed */
     max-height: 85vh;  /* 90% of the viewport's height */
     object-fit: contain; /* Ensures the image scales proportionally without cropping */
+    cursor: grab;
   }
   
   .close {
@@ -193,4 +194,23 @@ body {
     display: block;
     margin: 0 auto;
    }
+  .zoom-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .zoom-controls button {
+    font-size: 1.2em;
+    margin: 0 5px;
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #999;
+    cursor: pointer;
+  }
+
+
+
+
   

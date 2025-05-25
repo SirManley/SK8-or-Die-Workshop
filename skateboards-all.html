@@ -554,16 +554,31 @@
     </section>
   </main>
 
-  <!-- Lightbox Modal (should be included on pages where you want the full image pop-up) -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-      <img class="lightbox-content" id="lightbox-img">
-      <div id="caption"></div>
-    </div>
+<!-- Lightbox Modal (should be included on pages where you want the full image pop-up) -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div id="caption"></div>
+
+  <!-- Zoom Controls -->
+  <div class="zoom-controls">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">−</button>
+    <button id="reset">Reset</button>
   </div>
-  
+</div>
+
+<!-- Include Panzoom from CDN -->
+  <!-- Lightbox modal, gallery, etc... -->
+
+  <!-- ✅ Load Panzoom -->
+ <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+
+  <!-- ✅ Load your custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
